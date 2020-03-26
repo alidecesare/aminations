@@ -1,0 +1,85 @@
+
+.animation {
+  height: 250px;
+  width: 250px;
+  animation-name: grow;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+    background-color: orange;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(3);
+    background-color: teal;
+  }
+}
+
+.innerAnimation {
+  height: 250px;
+  width: 250px;
+  animation-name: smallGrow;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes smallGrow {
+  0% {
+    transform: scale(0.5);
+    background-color: teal;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: orange;
+    border-radius: 100%;
+  }
+}
+
+.animatedWords {
+  font-family: sans-serif;
+  color: teal;
+  animation-name: wordGrow;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes wordGrow {
+  0% {
+    transform: scale(3);
+    margin-top: -100vh;
+  }
+  100% {
+    transform: scale(6);
+    margin-top: 100vh;
+  }
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
